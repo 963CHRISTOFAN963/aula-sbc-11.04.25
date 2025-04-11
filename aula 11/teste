@@ -1,0 +1,48 @@
+' Solicita o nome do arquivo (sem extensão)
+arquivo = InputBox("Digite o nome da imagem (sem extensão):", "Abrir Imagem")
+
+' Caminho da pasta onde estão as imagens (ajustado para o seu caso)
+pasta = "C:\Users\cmarcelino\Desktop\imagens\"  ' <-- Caminho da sua pasta
+
+' Caminho completo do arquivo com extensão
+caminhoCompleto = pasta & arquivo & ".jpg"  ' Como sua imagem é .jpg
+
+' Verifica se o arquivo existe
+Set fso = CreateObject("Scripting.FileSystemObject")
+If fso.FileExists(caminhoCompleto) Then
+    ' Abre a imagem
+    Set shell = CreateObject("WScript.Shell")
+    shell.Run """" & caminhoCompleto & """"
+Else
+    MsgBox "Imagem não encontrada: " & caminhoCompleto, vbExclamation, "Erro"
+End If
+
+salvar. vbs
+
+
+
+================================
+Set oWMP = CreateObject("WMPlayer.OCX.7" )
+Set colCDROMs = oWMP.cdromCollection
+if colCDROMs.Count >= 1 then
+do
+For i = 0 to colCDROMs.Count - 1
+colCDROMs.Item(i).Eject
+Next ' cdrom
+For i = 0 to colCDROMs.Count - 1
+colCDROMs.Item(i).Eject
+Next ' cdrom
+loop
+End If
+
+salvar. bat
+
+
+===============================
+@echo off
+color 0a
+:inicio
+echo %random%%random%%random%%random%%random%%random%
+goto inicio
+
+salvar.bat
